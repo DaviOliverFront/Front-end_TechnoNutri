@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.bg-home{
+    background-color: #46a58c;
+}
+
+header{
+    font-family: "Nova Square", sans-serif;
+    height: 12vh;
+    
+}
+
