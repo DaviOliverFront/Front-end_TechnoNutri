@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 .bg-home{
     background-color: #CFCBCF;
 }
@@ -14,10 +15,15 @@ header{
     height: 15vh;
 }
 
-header > div > ul > li {
+header > div > ul > li > a {
     padding: 1.5rem;
     font-size: 3.5vh;
     color: #112d64;
 }
+
+header > div > img {
+    height: 13vh;
+}
+
 
 
