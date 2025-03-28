@@ -14,7 +14,6 @@ body{
     background-repeat: no-repeat;
     overflow-x: hidden;
     height: 100%;
-    
 }
 
 main{
@@ -24,7 +23,7 @@ main{
 }
 
 h1,h2 {
-    color: #FA4C16 ;
+    color: #FA4C16;
 }
 
 div > h1{

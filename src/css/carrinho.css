@@ -1,7 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #CFCBCF;
+    text-align: center;
+    justify-content: center;
+}
+
+body > main {
+    font-family: "Nova Square", sans-serif;
+    color: #FA4C16;
+    background-color: #3C504B;
+    height: 70vh;
+    width: 85vh;
+    border: 2px solid #FA4C16; /* Define a cor e o estilo da borda */
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+body > main{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-back{
+    justify-items: left;
+    background-color: #CFCBCF;
+    color: #FA4C16;
+    font-size: 2rem;
+}
+
+#produtos{
+    height: 20rem;
+    width: 20rem;
+    background-color: aliceblue;
+}
+
+
+
+
