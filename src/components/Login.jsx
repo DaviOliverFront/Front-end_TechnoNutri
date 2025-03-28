@@ -15,7 +15,13 @@ function Login() {
         email,
         password,
       });
-      setMessage(response.data.message);
+
+      if (response.status === 200) { 
+        setMessage("Login realizado com sucesso!");
+        window.location.href = "/home";
+      } else {
+        setMessage(response.data.message || "Erro no login");
+      }
     } catch (error) {
       setMessage(error.response?.data?.message || "Erro no login");
     }
@@ -51,7 +57,7 @@ function Login() {
         >
           {isLoading ? "Carregando..." : "Login"}
         </button>
-        {message && <p className="login-message">{message}</p>} {}
+        {message && <p className="login-message">{message}</p>}
         <button onClick={redirectToRegister} className="register-button">
           Não tem conta? Registre-se
         </button>

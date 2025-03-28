@@ -15,7 +15,15 @@ function Register() {
         email,
         password,
       });
-      setMessage(response.data.message);
+
+      if (response.status === 201) {
+        setMessage("Registro realizado com sucesso!");
+        setTimeout(() => {
+          window.location.href = "/login";
+        }, 2000);
+      } else {
+        setMessage(response.data.message || "Erro ao registrar");
+      }
     } catch (error) {
       setMessage(error.response?.data?.error || "Erro ao registrar");
     }
@@ -51,7 +59,7 @@ function Register() {
         >
           {isLoading ? "Carregando..." : "Registrar"}
         </button>
-        {message && <p className="register-message">{message}</p>} {}
+        {message && <p className="register-message">{message}</p>}
         <button onClick={redirectToLogin} className="login-button">
           Já tem uma conta? Clique aqui para Login
         </button>
