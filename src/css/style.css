@@ -6,12 +6,18 @@
     box-sizing: border-box;
 }
 .bg-home{
-    background-color: #46a58c;
+    background-color: #CFCBCF;
 }
 
 header{
     font-family: "Nova Square", sans-serif;
-    height: 12vh;
-    
+    height: 15vh;
 }
+
+header > div > ul > li {
+    padding: 1.5rem;
+    font-size: 3.5vh;
+    color: #112d64;
+}
+
 
