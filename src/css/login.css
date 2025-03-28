@@ -7,19 +7,18 @@
 }
 
 body{
-    background-image: url('../../public/images/back_login.jpg');
+    background-image: url('../../public/images/back_login_png.jpg');
     background-size: cover;
     background-position: top center;
     background-attachment: scroll;
     background-repeat: no-repeat;
     overflow-x: hidden;
-    height: 80vh;
+    height: 100%;
     
 }
 
 main{
     font-family: "Nova Square", sans-serif;
-    
     justify-items: right;
     margin-right: 10rem;
 }
@@ -56,6 +55,8 @@ input{
 .btn-login{
     margin-top: 1.25rem;
     font-size: 25px;
+    color: white;
+    background-color: #FA4C16;
 }
 
 #formulario {
