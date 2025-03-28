@@ -15,6 +15,16 @@ header{
     height: 15vh;
 }
 
+body{
+    font-family: "Nova Square", sans-serif;
+}
+
+h1{
+    color: #FA4C16;
+    font-size: 5.5vh;
+    
+}
+
 header > div > ul > li > a {
     padding: 1.5rem;
     font-size: 3.5vh;
@@ -25,9 +35,43 @@ header > div > img {
     height: 13vh;
 }
 
-.bg-section{
+.bg-section,.btn-color-w{
     background-color: #3C504B;
 }
 
+.btn-color-f{
+    background-color: #CFCBCF;
+}
 
+.bg-section-whey{
+    background-color: #FA4C16;
+}
 
+.bg-section-fitness{
+    background-color: #112d64db;
+}
+
+section > div > div > img{
+    height: 15vh;
+    width: 15vh;
+    margin: 2rem;
+}
+
+.btn-color{
+    background-color: #FA4C16;
+    color: white;
+    font-size: 2.5vh;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    border: none;
+}
+
+.btn-color,.btn-color-w,.btn-color-f{
+    font-size: 2.5vh;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    border: none;
+}
+.btn-color,.btn-color-w{
+    color: white;
+}

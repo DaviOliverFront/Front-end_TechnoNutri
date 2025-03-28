@@ -54,9 +54,11 @@ input{
 
 .btn-login{
     margin-top: 1.25rem;
-    font-size: 25px;
+    font-size: 23px;
     color: white;
     background-color: #FA4C16;
+    border-radius: 15px;
+    border: none;
 }
 
 #formulario {
