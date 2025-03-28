@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Register.css";
 
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleRegister = async () => {
+    setIsLoading(true);
     try {
       const response = await axios.post("http://localhost:3000/auth/register", {
         email,
@@ -16,6 +19,7 @@ function Register() {
     } catch (error) {
       setMessage(error.response?.data?.error || "Erro ao registrar");
     }
+    setIsLoading(false);
   };
 
   const redirectToLogin = () => {
@@ -23,25 +27,35 @@ function Register() {
   };
 
   return (
-    <div>
-      <h2>Registro</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Senha"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleRegister}>Registrar</button>
-      <p>{message}</p>
-      <button onClick={redirectToLogin}>
-        Já tem uma conta? Clique aqui para Login
-      </button>
+    <div className="register-container">
+      <h2 className="register-title">Registro</h2>
+      <div className="register-form">
+        <input
+          type="email"
+          placeholder="Digite seu email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="register-input"
+        />
+        <input
+          type="password"
+          placeholder="Digite sua senha"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="register-input"
+        />
+        <button
+          onClick={handleRegister}
+          className="register-button"
+          disabled={isLoading}
+        >
+          {isLoading ? "Carregando..." : "Registrar"}
+        </button>
+        {message && <p className="register-message">{message}</p>} {}
+        <button onClick={redirectToLogin} className="login-button">
+          Já tem uma conta? Clique aqui para Login
+        </button>
+      </div>
     </div>
   );
 }
